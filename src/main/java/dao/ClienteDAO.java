@@ -3,6 +3,7 @@ package dao;
 import model.Cliente;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.List;
 
 public class ClienteDAO {
@@ -31,7 +32,7 @@ public class ClienteDAO {
     }
 
     public List<Cliente> listarCliente() {
-        String query = "SELECT c.* FROM clientes c";
-        return this.entityManager.createQuery(query, Cliente.class).getResultList();
+        String query = "SELECT * FROM clientes";
+        return this.entityManager.createNativeQuery(query, Cliente.class).getResultList();
     }
 }

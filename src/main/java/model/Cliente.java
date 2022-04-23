@@ -46,4 +46,13 @@ public class Cliente {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", sexo='" + sexo + '\'' +
+                '}';
+    }
 }

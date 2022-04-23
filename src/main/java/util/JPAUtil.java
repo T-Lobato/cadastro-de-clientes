@@ -13,6 +13,4 @@ public class JPAUtil {
         return FACTORY.createEntityManager();
     }
 
-
-
 }
